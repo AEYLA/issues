@@ -1,23 +1,28 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import IssuesList from "./components/issues-list";
 
 class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                        Learn React
-                    </a>
+    state = {};
 
-                </header>
-            </div>
-        );
+    render() {
+        const issuesList = this.state.issuesList;
+        return <div className="App">{JSON.stringify(issuesList)}</div>;
+    }
+
+    componentDidMount() {
+        const requestOptions = {
+            method: "GET",
+            cache: "no-cache",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            }
+        };
+        fetch("https://api.github.com/repos/facebook/react/issues", requestOptions)
+            .then(response => response.json())
+            .then(responseJson => {
+                this.setState({ issuesList: responseJson });
+            });
     }
 }
 
