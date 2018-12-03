@@ -3,9 +3,9 @@ import "./normalize.css";
 import "./App.css";
 import IssuesList from "./components/issues-list";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSpinner, faBoxOpen } from "@fortawesome/free-solid-svg-icons";
+import { faComment, faBoxOpen } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSpinner, faBoxOpen);
+library.add(faComment, faBoxOpen);
 
 class App extends Component {
     render() {

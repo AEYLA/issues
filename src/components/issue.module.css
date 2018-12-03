@@ -12,7 +12,7 @@
     float: left;
 }
 
-.icon {
+.stateIcon {
     float: left;
     padding-right: 0.5rem;
 }
@@ -23,4 +23,12 @@
 
 .title {
     font-weight: bold;
+}
+
+.comments {
+    float: right;
+    font-size: smaller;
+}
+.commentIcon {
+    padding-right: 0.3rem;
 }
