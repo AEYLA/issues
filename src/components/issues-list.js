@@ -3,12 +3,13 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getIssues } from "../actions/issues-actions";
 import Issue from "./issue";
+import styles from "./issues-list.module.css";
 
 class IssuesList extends React.Component {
     render() {
         const issues = this.props.issuesList;
         return (
-            <div>
+            <div className={styles.container}>
                 {issues &&
                     issues.map(issue => {
                         return <Issue {...issue} />;

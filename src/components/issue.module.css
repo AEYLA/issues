@@ -1,5 +1,6 @@
 .container {
     padding: 0.5rem;
+    border: rgb(225, 225, 225) 1px solid;
 }
 
 .container:after {
