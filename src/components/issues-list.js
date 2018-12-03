@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getIssues } from "../actions/issues-actions";
+import Issue from "./issue";
 
 class IssuesList extends React.Component {
     render() {
@@ -10,7 +11,7 @@ class IssuesList extends React.Component {
             <div>
                 {issues &&
                     issues.map(issue => {
-                        return <div>{issue.title}</div>;
+                        return <Issue {...issue} />;
                     })}
             </div>
         );
