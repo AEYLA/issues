@@ -1,0 +1,20 @@
+@import "./common.module";
+
+:root {
+    font-family: Roboto;
+}
+
+header {
+    padding: 1rem;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    @include respond(small) {
+        width: 100%;
+    }
+    @include respond(medium) {
+        width: 100%;
+    }
+}

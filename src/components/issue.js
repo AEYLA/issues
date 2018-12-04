@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "./issue.module.css";
+import styles from "./issue.module.scss";
 import moment from "moment";
 
 const Issue = ({ title, state, number, comments, user, created_at }) => {

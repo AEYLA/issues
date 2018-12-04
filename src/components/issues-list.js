@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getIssues } from "../actions/issues-actions";
 import Issue from "./issue";
-import styles from "./issues-list.module.css";
+import styles from "./issues-list.module.scss";
 
 class IssuesList extends React.Component {
     render() {
