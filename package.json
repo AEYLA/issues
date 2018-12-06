@@ -6,6 +6,7 @@
         "@fortawesome/fontawesome-svg-core": "^1.2.8",
         "@fortawesome/free-solid-svg-icons": "^5.5.0",
         "@fortawesome/react-fontawesome": "^0.1.3",
+        "gh-pages": "^2.0.1",
         "moment": "^2.22.2",
         "node-sass": "^4.10.0",
         "react": "^16.6.3",
@@ -18,7 +19,9 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test"
+        "test": "react-scripts test",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -b master -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -36,5 +39,6 @@
         "react-test-renderer": "^16.6.3",
         "redux-devtools-extension": "^2.13.7",
         "redux-mock-store": "^1.5.3"
-    }
+    },
+    "homepage": "https://aeyla.github.io/issues"
 }
