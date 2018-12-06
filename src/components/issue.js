@@ -8,9 +8,9 @@ const Issue = ({ title, state, number, comments, user, created_at }) => {
     const openedByText = `#${number} opened ${timeCreatedUntilNow} by ${user.login}`;
     return (
         <section className={styles.container}>
-            <span className={styles.stateIcon}>
+            <div className={styles.stateIcon}>
                 <FontAwesomeIcon icon="box-open" color="green" />
-            </span>
+            </div>
 
             <div className={styles.content}>
                 <div className={styles.title}>{title}</div>

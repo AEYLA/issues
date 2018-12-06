@@ -1,6 +1,6 @@
 import { GET_ISSUES_IN_PROGRESS, GET_ISSUES_SUCCESS, GET_ISSUES_ERROR } from "../actions/issues-actions";
 
-const initialState = {
+export const initialState = {
     getIssuesInProgress: false,
     issuesList: [],
     getIssuesError: false,

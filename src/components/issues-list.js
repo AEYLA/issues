@@ -5,14 +5,14 @@ import { getIssues } from "../actions/issues-actions";
 import Issue from "./issue";
 import styles from "./issues-list.module.scss";
 
-class IssuesList extends React.Component {
+export class IssuesList extends React.Component {
     render() {
         const issues = this.props.issuesList;
         return (
             <div className={styles.container}>
                 {issues &&
                     issues.map(issue => {
-                        return <Issue {...issue} />;
+                        return <Issue {...issue} key={issue.id} />;
                     })}
             </div>
         );

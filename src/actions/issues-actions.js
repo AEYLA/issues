@@ -19,7 +19,7 @@ export function getIssues() {
                         dispatch({ type: GET_ISSUES_ERROR, error });
                     });
             } else {
-                dispatch({ type: GET_ISSUES_ERROR });
+                dispatch({ type: GET_ISSUES_ERROR, error: "An error occurred" });
             }
         });
     };

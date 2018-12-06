@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./normalize.css";
+import "./styles/normalize.css";
 import styles from "./App.module.scss";
 import IssuesList from "./components/issues-list";
 import { library } from "@fortawesome/fontawesome-svg-core";
